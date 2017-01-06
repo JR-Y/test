@@ -18,7 +18,8 @@
     
     &__title{
         font-weight: 300;
-        color: $mainBlue;     
+        color: $mainBlue; 
+        
         margin: 0;
         font-size: 2rem;
         
