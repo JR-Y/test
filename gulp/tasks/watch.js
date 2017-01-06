@@ -14,11 +14,11 @@ gulp.task('watch', function () {
     });
 
 
-    watch('./app/index.html', function () {
+    watch('./index.html', function () {
         browserSync.reload();
     });
 
-    watch('./app/assets/styles/**/*.css', function () {
+    watch('./assets/styles/**/*.css', function () {
         gulp.start('sccInject');
         
                      
@@ -27,6 +27,6 @@ gulp.task('watch', function () {
 });
 
 gulp.task('sccInject', ['styles'], function(){
-   return gulp.src('./app/temp/styles/styles.css')
+   return gulp.src('./temp/styles/styles.css')
            .pipe(browserSync.stream());
 });
